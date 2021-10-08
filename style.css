@@ -1,0 +1,724 @@
+:root {
+    --background-color: #E1CAF9;
+    --purple1: #CC00FF;
+    --purple2: #FF00FF;
+    --purple3: #FF00CC;
+    --purple4: #c028f6;
+    --purple5: #E6E6FA;
+    --purple6: #C724B1;
+    --pink: #FF0099;
+    --in-between-color: #767C87;
+    --opening-sentence: 'Frijole', cursive;
+    --opening-sentence2:'Londrina Shadow', cursive;
+    --opening-sentence3: 'Zeyada', cursive;
+    --hometext: 'Luckiest Guy', cursive;
+    --hometext2: 'Rampart One', cursive;
+  }
+
+body {
+    background-color: black;
+    /* background-color: var(--purple5); */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* header */
+
+/* rubik's cube */
+  
+  .box-canvas{
+    position: relative;
+    margin: auto;
+    margin-right: 300px;
+    display: block;
+    perspective: 800px;
+    /* border: 1px solid blue; */
+  }
+  
+  @keyframes rotateCube {
+    0% {
+      transform: rotateX(0) rotateY(0);
+    }
+  
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
+  .cube {
+    position:relative;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotateCube 30s infinite;
+    /* border: 1px solid yellow; */
+  }
+  
+  .side {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid greenyellow; */
+  }
+  
+  .side::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: rotate(90deg);
+    background: repeating-linear-gradient(to right, var(--in-between-color)  0, var(--in-between-color)  2px, transparent 2px, transparent 66px, var(--in-between-color) 66px, var(--in-between-color) 68px, transparent 68px, transparent 132px, var(--in-between-color) 132px);
+  }
+  
+  .back {
+    transform: translateZ(-100px);
+    background: repeating-linear-gradient(to right, var(--in-between-color) 0, var(--in-between-color) 2px, var(--purple1) 2px, var(--purple1)  66px, var(--in-between-color) 66px, var(--in-between-color) 68px, var(--purple1) 68px, var(--purple1) 132px, var(--in-between-color) 132px);
+  }
+
+  .left {
+    transform: translateX(-100px) rotateY(90deg);
+     background: repeating-linear-gradient(to right, var(--in-between-color)  0, var(--in-between-color)  2px, var(--purple2) 2px, var(--purple2)  66px, var(--in-between-color) 66px, var(--in-between-color)  68px, var(--purple2) 68px, var(--purple2) 132px, var(--in-between-color)  132px);
+  }
+
+  .right {
+    transform: translateX(100px) rotateY(90deg);
+     background: repeating-linear-gradient(to right, var(--in-between-color)  0, var(--in-between-color) 2px, var(--pink) 2px, var(--pink)  66px, var(--in-between-color)  66px, var(--in-between-color) 68px, var(--pink) 68px, var(--pink) 132px, var(--in-between-color) 132px);
+  }
+  
+  .top {
+    transform: translateY(-100px) rotateX(90deg);
+     background: repeating-linear-gradient(to right, var(--in-between-color) 0, var(--in-between-color) 2px, var(--purple3) 2px, var(--purple3) 66px, var(--in-between-color) 66px, var(--in-between-color)  68px, var(--purple3)  68px, var(--purple3) 132px, var(--in-between-color) 132px);
+  }
+  
+  .bottom {
+    transform: translateY(100px) rotateX(90deg);
+     background: repeating-linear-gradient(to right, var(--in-between-color) 0, var(--in-between-color) 2px, var(--purple5) 2px, var(--purple5) 66px, var(--in-between-color) 66px, var(--in-between-color)  68px, var(--purple5)  68px, var(--purple5) 132px, var(--in-between-color) 132px);
+  }
+  
+  .front {
+    transform: translateZ(100px);
+     background: repeating-linear-gradient(to right, var(--in-between-color) 0, var(--in-between-color) 2px, var(--purple4) 2px, var(--purple4) 66px, var(--in-between-color) 66px, var(--in-between-color) 68px, var(--purple4) 68px, var(--purple4) 132px, var(--in-between-color)  132px);
+  }
+/* close rubik's cube */
+
+/* icons*/
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    color: white;
+  }
+
+  .social, .skill {
+      margin-right: 10px;
+  }
+  .icon-user {
+      font-size: 200px;
+  }
+
+  .icon-css3 {
+      color: royalblue;
+  }
+
+  .skill {
+      font-size: 35px;
+  }
+
+  
+  /* ==========================================
+  Single-colored icons can be modified like so:
+  .icon-name {
+    font-size: 32px;
+    color: red;
+  }
+  ========================================== */
+
+  /* close icons */
+
+.top-header-section {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    /* background-color: black; */
+    border-bottom: 3px solid var(--purple6);
+}
+
+.logo-section {
+    /* height: 80px; */
+    /* border: 1px solid green; */
+}
+
+.name {
+    color: var(--purple1);
+    font-size: 55px;
+    margin-top: -145px;
+    font-weight: bold;
+    float: right;
+    font-family: var(--opening-sentence3);
+    /* border: 1px solid red; */
+}
+
+.clear {
+    clear: both;
+}
+
+
+.top-nav {
+    /* border: 1px solid yellow; */
+} 
+
+.top-nav-list-item a {
+    color: var(--purple3);
+    font-size: 20px;
+    /* border: 1px solid purple; */
+}
+
+
+/* close header */
+
+/* main */
+
+/* home section */
+
+.home-section {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    /* background-color: white; */
+    border-bottom: 2px solid var(--purple4);
+}
+
+.home-text {
+    color: var(--purple3);
+    font-family: var(--hometext);
+    font-size: 28px;
+    /* margin-top: -20px; */
+    /* border: 1px solid green; */
+}
+
+.hand-img {
+    width: 70px;
+    display: block;
+    height: auto;
+   /* border: 1px solid red; */
+}
+
+.home-opening-sentence {
+    font-family: cursive;
+    color: var(--purple1);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: var(--opening-sentence3);
+    margin-top: -60px;
+    padding-top: 5px;
+    padding-left: 90px;
+    /* border: 1px solid red; */
+}
+
+.home-image {
+    margin-top: 80px;
+    /* border: 1px solid red; */
+}
+
+.home-img {
+    margin-bottom: 50px;
+    width: 400px;
+    /* border: 1px solid red; */
+}
+
+
+
+/* close home section */
+
+/* about section */
+
+.about-section {
+    padding-top: 70px;
+    /* border: 1px solid red; */
+}
+
+.about-sub-header {
+    color: var(--purple2);
+    /* border: 1px solid red; */
+}
+
+.about-text {
+    color: var(--purple3);
+    margin-left: 120px;
+    /* float: right; */
+    /* border: 1px solid blue; */
+}
+
+.headshot {
+    margin-top: -220px;
+    /* border: 1px solid greenyellow; */
+}
+
+.headshot-img {
+    border-radius: 200px;
+    width: 400px;
+    margin-top: 200px;
+    /* border: 2px solid blue; */
+    background: linear-gradient( var(--purple5), var(--purple3), var(--purple2));
+}
+
+.resume-button, .project-button{
+    padding: 8px;
+    border-radius: 20px;
+    background-color: black;
+    border: 2px solid var(--purple6);
+}
+
+.resume-button:hover, .project-button:hover {
+    background-color: var(--purple5);
+}
+
+.resume-button a, .project-button a {
+    color: var(--purple6);
+    text-decoration: none;   
+}
+
+.skills-div {
+    width: 40%;
+    /* border: 1px solid yellow; */
+}
+
+
+.skills-sub-header {
+    margin-top: -100px;
+    color: var(--purple2);
+    /* border: 1px solid orange; */
+}
+    
+.skill-list {
+    /* border: 1px solid red; */
+}
+    
+.skill-list-item {
+    list-style-type: none;
+    display: inline;  
+}
+
+.interest-section-text {
+    /* border: 1px solid red; */
+}
+
+.text-interest {
+    color: var(--purple2);
+    font-size: 26px;
+}
+
+.interest-section {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid var(--purple3);
+}
+
+.interest-list {
+    /* border: 1px solid red; */
+}
+
+.interest-list-item {
+    list-style-type: none;
+    display: inline;
+    /* border: 1px solid green; */
+}
+
+.interest-caption {
+    color: var(--pink);
+    font-size: 10px;
+    font-weight: bold;
+    align-items: center;
+    width: 65%;
+    padding-left: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+.interest-caption {
+    /* border: 1px solid blue; */
+}
+
+.interest-img {
+    margin-right: 30px;
+    border-radius: 50px;
+    background-color: var(--purple5);
+    width: 100px;
+}  
+
+.interest-list-caption {
+    color: var(--purple1);
+    font-family: var(--opening-sentence3);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.compsci-img {
+    width: 100px;
+    padding: 8px;
+}
+
+.diversity-img {
+    /* padding: 10px; */
+    /* margin-right: 20px; */
+}
+
+.edutech-img {
+    padding: 5px;
+}
+
+.equity-img {
+    border-radius: 150px;
+    padding: 5px;
+}
+
+.space-img {
+    margin-top: 6px;
+    padding: 5px;
+}
+
+.outreach-img {
+    padding: 5px;
+}
+/* close about section */
+
+/* project section */
+
+.projects-section {
+    padding-top: 15px;
+    border-bottom: 2px solid var(--purple2);
+}
+
+.projects-sub-header {
+    color: var(--purple2);
+    padding-bottom: 25px;
+    /* border: 1px solid blue; */
+}
+
+.project-description, .project-description2 {
+    color: var(--purple3);
+    width: 30%;
+    border: 1px solid var(--pink);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 17px;
+}
+
+.project-description2 {
+    float: right;
+}
+
+
+.project-link {
+    color: var(--pink);
+    margin-right: 20px;
+}
+
+.project-link:hover {
+    color: var(--purple1);
+    text-decoration: none;
+}
+
+.project-image {
+    margin-top: -100px;
+    border-radius: 10px; 
+    border: 2px solid var(--purple4);  
+}
+
+.umbrella-img {
+    width: 650px;
+}
+
+.venedor-img {
+    width: 650px;
+}
+
+.project {
+    padding-bottom: 100px;
+}
+
+/* close project section */
+
+/* contact section */
+
+.icon-envelop {
+    margin-top: -80px;
+    margin-left: 130px;
+    /* border: 1px solid lightblue; */
+}
+
+.contact-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--purple4);
+}
+
+.contact-sub-header {
+    color: var(--purple1);
+}
+
+.contact-text {
+    color: var(--pink);
+    font-size: 18px;
+}
+
+.social-list {
+    margin-top: -45px;
+    margin-right: 20px;
+    /* border: 1px solid yellow; */
+}
+
+.social-text {
+    /* width: 78%; */
+    margin-top: -40px;
+    color: var(--pink);
+    font-size: 18px;
+    /* border: 1px solid red; */
+}
+
+/* close contact section */
+
+/* footer */
+
+.footer {
+    color: var(--purple3);
+    padding-top: 10px;
+}
+
+.social-list {
+    padding: 0;
+    /* border: 1px solid red; */
+    
+}
+
+.social-list-item {
+    list-style-type: none;
+    display: inline;
+    /* border: 1px solid blue; */
+}
+
+.colophon, .colophon-text {
+    color: var(--purple2);
+    /* border: 1px solid red; */
+}
+
+/* media queries */
+
+/* 576px */
+
+@media (max-width: 576px) {
+
+    .top-nav {
+        align-content: center;
+        margin: 0;
+        padding-top: 140px;
+        margin-left: 100px;
+        /* border: 1px solid yellow; */
+    }
+
+    .top-header-nav {
+        padding: 0;
+    }
+
+    .name {
+        padding-top: 30px;
+        float: right;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .top-header-section {
+        padding-bottom: 100px
+    }
+
+}
+
+@media (max-width: 576px) {
+    
+    .home-section {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    
+    .home-img {
+        padding-top: 20px;
+    }
+    
+    .about-section {
+        padding-top: 50px;
+    }
+
+    .about-sub-header {
+        padding-top: 30px;
+    }
+    
+    .about-text {
+        margin: 0;
+        padding-bottom: 15px;
+        /* border: 1px solid yellow; */
+    
+    }
+   
+    .skills-div {
+        padding-top: 200px;
+        margin: 0;
+        /* border: 1px solid yellow; */
+    }
+
+    .skill-list {
+        margin: 0;
+    }
+
+    .interest-section {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        /* border: 1px solid yellow; */
+    }
+
+    .project-description {
+        width: 32%;
+    }
+
+    .project-description2 {
+        width: 40%;
+    }
+
+    .project-image {
+        margin-top: -15px;
+    }
+
+    .umbrella-img {
+        margin-right: 100px;
+    }
+
+    .email-contact {
+        margin-top: -65px;
+        color: white;
+    }
+
+    .social-text-div {
+        margin-top: 20px;
+        /* border: 1px solid yellow; */
+    }
+
+    .social-text {
+        width: 40%;
+        margin-left: 70px;
+        padding: 0;
+        /* border: 1px solid red; */
+    }
+
+}
+
+@media (min-width: 768px) {
+    .name {
+        width: 70%;
+        margin-left: 150px;
+        padding-left: 200px;
+       /* border: 1px solid red;  */
+    }
+
+    .logo-section {
+        width: 200%;
+        /* border: 1px solid green; */
+    }
+
+    .top-header-section {
+        padding-bottom: 15px;
+    }
+
+    .top-nav {
+        padding-top: 70px;
+        margin-left: 150px;
+        /* border: 1px solid yellow;s */
+    }
+
+    .home-section {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .skills-div {
+        margin: 0;
+        padding-top: 150px;
+        /* border: 1px solid yellow; */
+    }
+
+    .interest-section {
+        padding-bottom: 10px;
+    }
+
+    .projects-section {
+        padding-top: 30px;
+    }
+
+    .project-image {
+        margin-top: -12px;
+    }
+
+    .email-contact {
+        margin-top: -65px;
+        color: white;
+    }
+
+    .social-text-div {
+        margin-top: 20px;
+        /* border: 1px solid yellow; */
+    }
+
+    .social-text {
+        width: 50%;
+        align-content: center;
+        padding-left: 140px;
+        margin-left: 20px;
+
+        /* border: 1px solid orange; */
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .top-nav {
+        padding-left: 160px;
+        margin-top: -30px;
+        /* border: 1px solid orange;s */
+    }
+
+    .name {
+        margin-left: 270px;
+        padding-top: 30px;
+    }
+
+    .top-header-section {
+        padding-bottom: 30px;
+    }
+
+    .skills-sub-header {
+        margin-top: -250px;
+    }
+
+    .interest-section {
+        margin-top: -60px;
+    }
+
+    .umbrella-img {
+        margin-top: -10px;
+        margin-left: 30px;
+    }
+
+    .social-text {
+        margin-left: 80px;
+    }
+}
+
+
