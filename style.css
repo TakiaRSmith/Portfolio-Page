@@ -27,7 +27,7 @@ html {
 
 /* header */
 
-/* rubik's cube */
+/* rubik's cube https://codepen.io/aitchiss/pen/bGVyEEZ */
   
   .box-canvas{
     position: relative;
@@ -430,6 +430,10 @@ html {
     margin-top: -100px;
     border-radius: 10px; 
     border: 2px solid var(--purple4);  
+}
+
+.restaurant-img {
+    width: 640px;
 }
 
 .umbrella-img {
